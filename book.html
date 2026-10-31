@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("ayadati-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#1287A0">
@@ -59,9 +60,18 @@
   .error{color:var(--danger);font-size:13px;min-height:1.2em;margin:0}
   .note{text-align:center;color:var(--soft);font-size:12px;margin:14px 0 0}
   .fatal{text-align:center;padding:40px 10px;color:var(--soft)}
+
+/* theme toggle */
+.theme-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;border:1px solid rgba(127,127,127,.4);background:rgba(127,127,127,.14);color:inherit;cursor:pointer;padding:0;font:inherit}
+.theme-btn:hover{border-color:currentColor}.theme-btn:focus-visible{outline:3px solid #1287A0;outline-offset:2px}
+.theme-btn .ic{width:20px;height:20px}.theme-btn .s{display:none}
+:root[data-theme="dark"] .theme-btn .m{display:none}:root[data-theme="dark"] .theme-btn .s{display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-btn .m{display:none}:root:not([data-theme="light"]) .theme-btn .s{display:block}}
+.theme-float{position:fixed;top:14px;left:14px;z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 </style>
 </head>
 <body>
+<button type="button" class="theme-btn theme-float" data-theme-toggle aria-label="تبديل الوضع الليلي والنهاري"><svg class="ic m" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg><svg class="ic s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg></button>
 <div class="wrap" id="app">
   <noscript><p class="fatal">يلزم تفعيل جافاسكربت لإتمام الحجز.</p></noscript>
 </div>
@@ -167,5 +177,6 @@
   });
 })();
 </script>
+<script>(function(){var R=document.documentElement,bs=document.querySelectorAll('[data-theme-toggle]');function cur(){return R.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}function go(){var n=cur()==='dark'?'light':'dark';R.setAttribute('data-theme',n);try{localStorage.setItem('ayadati-theme',n)}catch(e){}window.dispatchEvent(new Event('themechange'))}for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',go)})();</script>
 </body>
 </html>

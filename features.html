@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("ayadati-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="نظرة شاملة على كل مزايا تطبيق عيادتي — مرتّبة حسب أقسام التطبيق.">
@@ -137,12 +138,21 @@
   .highlight p{margin:0;font-size:14px;color:var(--ink-soft);max-width:70ch;}
 
   footer{max-width:960px;margin:56px auto 0;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-faint);}
+
+/* theme toggle */
+.theme-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;border:1px solid rgba(127,127,127,.4);background:rgba(127,127,127,.14);color:inherit;cursor:pointer;padding:0;font:inherit}
+.theme-btn:hover{border-color:currentColor}.theme-btn:focus-visible{outline:3px solid #1287A0;outline-offset:2px}
+.theme-btn .ic{width:20px;height:20px}.theme-btn .s{display:none}
+:root[data-theme="dark"] .theme-btn .m{display:none}:root[data-theme="dark"] .theme-btn .s{display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-btn .m{display:none}:root:not([data-theme="light"]) .theme-btn .s{display:block}}
+.theme-float{position:fixed;top:14px;left:14px;z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"عيادتي","item":"https://alaabashirsaijary.github.io/ayadati-site/"},{"@type":"ListItem","position":2,"name":"الميزات","item":"https://alaabashirsaijary.github.io/ayadati-site/features.html"}]}
 </script>
 </head>
 <body>
+<button type="button" class="theme-btn theme-float" data-theme-toggle aria-label="تبديل الوضع الليلي والنهاري"><svg class="ic m" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg><svg class="ic s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg></button>
 
 <div class="wrap" style="padding-top:8px;">
   <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--teal-deep);text-decoration:none;">→ الصفحة الرئيسية</a>
@@ -292,5 +302,6 @@
 
 <footer class="wrap">عيادتي · لمحة شاملة عن مزايا التطبيق · مبنية على حالة الكود الفعلية. · <a href="guides/" style="color:var(--teal-deep)">أدلة للأطباء</a> · <a href="about.html" style="color:var(--teal-deep)">من نحن</a></footer>
 
+<script>(function(){var R=document.documentElement,bs=document.querySelectorAll('[data-theme-toggle]');function cur(){return R.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}function go(){var n=cur()==='dark'?'light':'dark';R.setAttribute('data-theme',n);try{localStorage.setItem('ayadati-theme',n)}catch(e){}window.dispatchEvent(new Event('themechange'))}for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',go)})();</script>
 </body>
 </html>
