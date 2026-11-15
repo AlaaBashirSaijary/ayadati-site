@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1287A0">
+<title>تحميل عيادتي</title>
+<meta name="description" content="حمّل تطبيق عيادتي لنظام أندرويد مجانًا وجرّبه ١٤ يومًا. يعمل بلا إنترنت.">
+<link rel="canonical" href="https://alaabashirsaijary.github.io/ayadati-site/download.html">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --paper:#F4FAFC; --paper-raised:#FFFFFF; --ink:#0A2540; --ink-soft:#3D5A73;
+    --teal:#1287A0; --teal-deep:#0B6073; --teal-tint:#E7F3F8; --line:#D5E6EE;
+    --on-teal:#FFFFFF; --qr-ground:#FFFFFF;
+    --shadow:0 24px 56px -30px rgba(10,37,64,.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#07131C; --paper-raised:#0E2230; --ink:#E8F3F8; --ink-soft:#A9C2D1;
+      --teal:#4FC1DD; --teal-deep:#9ADCEB; --teal-tint:#0F2A38; --line:#1C3547;
+      --on-teal:#07131C; --shadow:0 24px 56px -30px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#07131C; --paper-raised:#0E2230; --ink:#E8F3F8; --ink-soft:#A9C2D1;
+    --teal:#4FC1DD; --teal-deep:#9ADCEB; --teal-tint:#0F2A38; --line:#1C3547;
+    --on-teal:#07131C; --shadow:0 24px 56px -30px rgba(0,0,0,.7);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif; line-height:1.8;
+    padding-inline:16px;
+  }
+  main{max-width:880px; margin:0 auto; padding-block:32px 56px}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);
+    font-family:'Markazi Text',serif; font-weight:700; font-size:24px}
+  .brand img{width:40px; height:40px; border-radius:10px}
+  h1{font-family:'Markazi Text','Traditional Arabic',serif; font-weight:700;
+    font-size:clamp(34px,6vw,52px); line-height:1.25; margin:28px 0 10px; text-wrap:balance}
+  .lead{color:var(--ink-soft); font-size:18px; max-width:56ch; margin:0}
+  .grid{display:grid; grid-template-columns:1.25fr 1fr; gap:24px; margin-top:32px; align-items:start}
+  @media (max-width:720px){ .grid{grid-template-columns:1fr} }
+  .panel{background:var(--paper-raised); border:1px solid var(--line); border-radius:16px; padding:24px}
+  .get{box-shadow:var(--shadow)}
+  .btn{display:flex; align-items:center; justify-content:center; gap:10px; width:100%;
+    background:var(--teal); color:var(--on-teal); font:inherit; font-weight:700; font-size:19px;
+    padding:15px 20px; border-radius:12px; text-decoration:none; border:0}
+  .btn:hover{background:var(--teal-deep); color:#fff}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--teal); outline-offset:3px}
+  .meta{color:var(--ink-soft); font-size:14px; margin:10px 0 0; text-align:center}
+  h2{font-size:20px; margin:0 0 12px}
+  ol{margin:0; padding-inline-start:22px}
+  li{margin-block:8px}
+  .note{background:var(--teal-tint); border-radius:12px; padding:14px 16px; margin-top:18px;
+    font-size:15px; color:var(--ink-soft)}
+  .qr{text-align:center}
+  .qr img{width:100%; max-width:240px; height:auto; border-radius:12px; border:1px solid var(--line); background:var(--qr-ground)}
+  .qr p{margin:12px 0 0; color:var(--ink-soft); font-size:15px}
+  .ios{margin-top:24px; font-size:15px; color:var(--ink-soft)}
+  .support{margin-top:24px; font-size:15px}
+  .support a{color:var(--teal-deep); font-weight:600}
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="./"><img src="assets/logo-96.png" alt="" width="40" height="40"><span>عيادتي</span></a>
+
+  <h1>حمّل عيادتي على هاتفك</h1>
+  <p class="lead">تطبيق عربي لإدارة العيادة يعمل بلا إنترنت: ملفات المرضى والمواعيد والوصفات. جرّبه مجانًا ١٤ يومًا.</p>
+
+  <div class="grid">
+    <section class="panel get" aria-labelledby="dl">
+      <h2 id="dl">لأجهزة أندرويد</h2>
+      <a class="btn" id="apk" href="https://github.com/AlaaBashirSaijary/ayadati-site/releases/latest/download/app-release.apk" download>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+        تحميل التطبيق (APK)
+      </a>
+      <p class="meta">ملف واحد · يحتاج أندرويد ٦ أو أحدث · بلا إعلانات</p>
+
+      <h2 style="margin-top:26px">طريقة التثبيت</h2>
+      <ol>
+        <li>اضغط «تحميل التطبيق» وانتظر انتهاء التنزيل.</li>
+        <li>افتح الملف من إشعار التنزيل أو من مجلد «التنزيلات».</li>
+        <li>إذا ظهرت رسالة «التثبيت من مصدر غير معروف»، اضغط «الإعدادات» ثم فعّل «السماح من هذا المصدر»، ثم ارجع واضغط «تثبيت».</li>
+        <li>افتح عيادتي وأنشئ حساب الطبيب، وستبدأ فترة التجربة المجانية.</li>
+      </ol>
+      <div class="note">هذه الرسالة طبيعية لأي تطبيق يُنزَّل من خارج متجر جوجل بلاي. الملف موقّع من مطوّر التطبيق، وبياناتك تبقى على هاتفك.</div>
+    </section>
+
+    <aside class="panel qr" aria-labelledby="qrh">
+      <h2 id="qrh">أو امسح الرمز من هاتفك</h2>
+      <img src="assets/download-qr.svg" alt="رمز QR يفتح صفحة تحميل عيادتي" width="240" height="240">
+      <p>وجّه كاميرا هاتفك نحو الرمز لفتح هذه الصفحة وتحميل التطبيق.</p>
+    </aside>
+  </div>
+
+  <p class="ios"><strong>آيفون؟</strong> نسخة iOS قيد التجهيز. راسلنا على واتساب لنضيفك إلى قائمة التجربة المبكرة.</p>
+  <p class="support">تحتاج مساعدة بالتثبيت؟ <a class="js-whatsapp" href="https://wa.me/963984668063" target="_blank" rel="noopener">راسلنا على واتساب</a></p>
+</main>
+<script>
+  (function(){
+    var m = 'مرحبًا، بدي مساعدة بتثبيت تطبيق عيادتي.';
+    var a = document.querySelector('.js-whatsapp');
+    if (a) a.href = 'https://wa.me/963984668063?text=' + encodeURIComponent(m);
+  })();
+</script>
+</body>
+</html>
